@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom'
+
 import heroBg from "../assets/1.png"
 
 function Hero() {
@@ -31,19 +33,31 @@ function Hero() {
           focus, clarity, and wellness into your everyday ritual.
         </p>
 
+        {/* Buttons */}
         <div className="mt-10 flex gap-5 flex-wrap justify-center">
 
-          <button className="bg-[#355E3B] text-white px-8 py-4 rounded-full hover:bg-[#27452c] transition">
-            Explore Matcha
-          </button>
+          {/* Shop Link */}
+          <Link to="/shop">
 
-          <button className="border border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-[#355E3B] transition">
-            Learn More
-          </button>
+            <button className="bg-[#355E3B] text-white px-8 py-4 rounded-full hover:bg-[#27452c] transition duration-300">
+              Explore Matcha
+            </button>
+
+          </Link>
+
+          {/* Benefits Link */}
+          <Link to="/benefits">
+
+            <button className="border border-white text-white px-8 py-4 rounded-full hover:bg-white hover:text-[#355E3B] transition duration-300">
+              Learn More
+            </button>
+
+          </Link>
 
         </div>
 
       </div>
+
     </section>
   )
 }
