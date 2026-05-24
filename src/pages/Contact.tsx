@@ -1,8 +1,6 @@
-import MainLayout from '../layouts/MainLayout'
-
 function Contact() {
   return (
-    <MainLayout>
+    <>
 
       <section className="pt-40 pb-28 bg-[#F7F5EF] min-h-screen">
 
@@ -153,7 +151,7 @@ function Contact() {
 
       </section>
 
-    </MainLayout>
+    </>
   )
 }
 

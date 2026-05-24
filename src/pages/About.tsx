@@ -1,10 +1,8 @@
-import MainLayout from '../layouts/MainLayout'
-
 import aboutImg from '../assets/5.png'
 
 function About() {
   return (
-    <MainLayout>
+    <>
 
       <div className="bg-[#F7F5EF] min-h-screen pt-[90px]">
 
@@ -144,7 +142,7 @@ function About() {
 
       </div>
 
-    </MainLayout>
+    </>
   )
 }
 

@@ -1,8 +1,6 @@
-import MainLayout from '../layouts/MainLayout'
-
 function Benefits() {
   return (
-    <MainLayout>
+    <>
 
       <section className="py-28 bg-white pt-40 min-h-screen">
 
@@ -103,7 +101,7 @@ function Benefits() {
 
       </section>
 
-    </MainLayout>
+    </>
   )
 }
 

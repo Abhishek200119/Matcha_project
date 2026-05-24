@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 
-import MainLayout from '../layouts/MainLayout'
 
 import product1 from '../assets/2.png'
 import product2 from '../assets/3.png'
@@ -35,7 +34,7 @@ function Shop() {
   }, [])
 
   return (
-    <MainLayout>
+
 
       <div className="bg-[#F7F5EF] min-h-screen pt-[90px]">
 
@@ -381,7 +380,7 @@ function Shop() {
 
       </div>
 
-    </MainLayout>
+  
   )
 }
 

@@ -1,4 +1,3 @@
-import MainLayout from '../layouts/MainLayout'
 import Hero from '../home/Hero'
 import Benefits from '../home/Benefits'
 import FeaturedProducts from '../home/FeaturedProducts'
@@ -9,17 +8,23 @@ import InstagramGrid from '../home/InstagramGrid'
 
 function Home() {
   return (
-    <MainLayout>
+    <>
 
       <Hero />
-       <Benefits />
-       <FeaturedProducts />
-       <Testimonials />
-       <MatchaRitual />
-       <Newsletter />
-       <InstagramGrid />
 
-    </MainLayout>
+      <Benefits />
+
+      <FeaturedProducts />
+
+      <Testimonials />
+
+      <MatchaRitual />
+
+      <Newsletter />
+
+      <InstagramGrid />
+
+    </>
   )
 }
 

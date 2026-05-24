@@ -1,18 +1,18 @@
 import Navbar from '../layout/Navbar'
 import Footer from '../layout/Footer'
 
-interface Props {
-  children: React.ReactNode
-}
+import { Outlet } from 'react-router-dom'
 
-function MainLayout({ children }: Props) {
+function MainLayout() {
   return (
     <>
+
       <Navbar />
 
-      {children}
+      <Outlet />
 
       <Footer />
+
     </>
   )
 }
