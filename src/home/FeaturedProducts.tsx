@@ -57,10 +57,12 @@ function FeaturedProducts() {
                   ₹999
                 </span>
 
-                <Link to="/product">
+                <Link to="/product/ceremonial-matcha">
+
                   <button className="bg-[#355E3B] text-white px-6 py-3 rounded-full hover:bg-[#27452c] hover:scale-105 transition duration-300">
                     View Product
                   </button>
+
                 </Link>
 
               </div>
@@ -100,10 +102,12 @@ function FeaturedProducts() {
                   ₹799
                 </span>
 
-                <Link to="/product">
+                <Link to="/product/matcha-latte">
+
                   <button className="bg-[#355E3B] text-white px-6 py-3 rounded-full hover:bg-[#27452c] hover:scale-105 transition duration-300">
                     View Product
                   </button>
+
                 </Link>
 
               </div>
@@ -143,10 +147,12 @@ function FeaturedProducts() {
                   ₹1499
                 </span>
 
-                <Link to="/product">
+                <Link to="/product/matcha-gift-box">
+
                   <button className="bg-[#355E3B] text-white px-6 py-3 rounded-full hover:bg-[#27452c] hover:scale-105 transition duration-300">
                     View Product
                   </button>
+
                 </Link>
 
               </div>

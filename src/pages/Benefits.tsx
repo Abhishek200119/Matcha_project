@@ -1,4 +1,24 @@
+import { useEffect, useState } from 'react'
+
+import banner1 from '../assets/11.png'
+import banner2 from '../assets/12.png'
+
 function Benefits() {
+
+  const [currentBanner, setCurrentBanner] = useState(0)
+
+  useEffect(() => {
+
+    const interval = setInterval(() => {
+
+      setCurrentBanner((prev) => (prev === 0 ? 1 : 0))
+
+    }, 8000)
+
+    return () => clearInterval(interval)
+
+  }, [])
+
   return (
     <>
 
@@ -181,6 +201,7 @@ function Benefits() {
           <div className="grid md:grid-cols-4 gap-8 mt-20">
 
             <div className="text-center">
+
               <div className="w-24 h-24 mx-auto rounded-full bg-[#DFF1D8] flex items-center justify-center text-4xl">
                 ☀️
               </div>
@@ -192,9 +213,11 @@ function Benefits() {
               <p className="mt-3 text-gray-600">
                 Start your day with clean energy.
               </p>
+
             </div>
 
             <div className="text-center">
+
               <div className="w-24 h-24 mx-auto rounded-full bg-[#DFF1D8] flex items-center justify-center text-4xl">
                 💻
               </div>
@@ -206,9 +229,11 @@ function Benefits() {
               <p className="mt-3 text-gray-600">
                 Stay productive and mentally clear.
               </p>
+
             </div>
 
             <div className="text-center">
+
               <div className="w-24 h-24 mx-auto rounded-full bg-[#DFF1D8] flex items-center justify-center text-4xl">
                 🧘
               </div>
@@ -220,9 +245,11 @@ function Benefits() {
               <p className="mt-3 text-gray-600">
                 Relax with mindful matcha moments.
               </p>
+
             </div>
 
             <div className="text-center">
+
               <div className="w-24 h-24 mx-auto rounded-full bg-[#DFF1D8] flex items-center justify-center text-4xl">
                 🌙
               </div>
@@ -234,6 +261,7 @@ function Benefits() {
               <p className="mt-3 text-gray-600">
                 End your day feeling balanced.
               </p>
+
             </div>
 
           </div>
@@ -242,29 +270,55 @@ function Benefits() {
 
       </section>
 
-      {/* Banner Section */}
-      <section className="py-32 bg-[#1D2B1F] text-white text-center">
+      {/* Banner Slider Section */}
+      <section className="w-full overflow-hidden bg-[#1D2B1F]">
 
-        <div className="max-w-5xl mx-auto px-6">
+        <div className="relative w-full h-[700px] md:h-[850px]">
 
-          <p className="uppercase tracking-[5px] text-[#A7C957] font-semibold text-sm">
-            Wellness Lifestyle
-          </p>
+          {/* Banner 1 */}
+          <img
+            src={banner1}
+            alt="Matcha Banner"
+            className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-[2500ms] ${
+              currentBanner === 0
+                ? 'opacity-100'
+                : 'opacity-0'
+            }`}
+          />
 
-          <h2 className="mt-6 text-5xl md:text-6xl font-bold leading-tight">
-            Drink Wellness
-            <br />
-            Every Day
-          </h2>
+          {/* Banner 2 */}
+          <img
+            src={banner2}
+            alt="Matcha Banner"
+            className={`absolute top-0 left-0 w-full h-full object-cover transition-opacity duration-[2500ms] ${
+              currentBanner === 1
+                ? 'opacity-100'
+                : 'opacity-0'
+            }`}
+          />
 
-          <p className="mt-8 text-lg text-gray-300 leading-9 max-w-3xl mx-auto">
-            Premium ceremonial-grade matcha crafted to energize
-            your body, calm your mind, and elevate your daily rituals.
-          </p>
+          {/* Dots */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-20">
 
-          <button className="mt-10 bg-[#355E3B] px-8 py-4 rounded-full text-lg hover:bg-[#27452c] transition duration-300">
-            Shop Matcha
-          </button>
+            <button
+              onClick={() => setCurrentBanner(0)}
+              className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                currentBanner === 0
+                  ? 'bg-white scale-125'
+                  : 'bg-white/50'
+              }`}
+            />
+
+            <button
+              onClick={() => setCurrentBanner(1)}
+              className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                currentBanner === 1
+                  ? 'bg-white scale-125'
+                  : 'bg-white/50'
+              }`}
+            />
+
+          </div>
 
         </div>
 
@@ -278,6 +332,7 @@ function Benefits() {
           <div className="grid md:grid-cols-4 gap-10 text-center">
 
             <div>
+
               <h2 className="text-6xl font-bold text-[#355E3B]">
                 15K+
               </h2>
@@ -285,9 +340,11 @@ function Benefits() {
               <p className="mt-4 text-gray-600 text-lg">
                 Happy Customers
               </p>
+
             </div>
 
             <div>
+
               <h2 className="text-6xl font-bold text-[#355E3B]">
                 98%
               </h2>
@@ -295,9 +352,11 @@ function Benefits() {
               <p className="mt-4 text-gray-600 text-lg">
                 Feel Better Focus
               </p>
+
             </div>
 
             <div>
+
               <h2 className="text-6xl font-bold text-[#355E3B]">
                 4.9★
               </h2>
@@ -305,9 +364,11 @@ function Benefits() {
               <p className="mt-4 text-gray-600 text-lg">
                 Customer Rating
               </p>
+
             </div>
 
             <div>
+
               <h2 className="text-6xl font-bold text-[#355E3B]">
                 100%
               </h2>
@@ -315,6 +376,7 @@ function Benefits() {
               <p className="mt-4 text-gray-600 text-lg">
                 Ceremonial Grade
               </p>
+
             </div>
 
           </div>
@@ -343,7 +405,10 @@ function Benefits() {
           <div className="grid md:grid-cols-4 gap-8 mt-20">
 
             <div className="bg-white p-10 rounded-[30px] text-center">
-              <div className="text-5xl">🍃</div>
+
+              <div className="text-5xl">
+                🍃
+              </div>
 
               <h3 className="mt-6 text-2xl font-bold">
                 Matcha Leaves
@@ -352,10 +417,14 @@ function Benefits() {
               <p className="mt-4 text-gray-600">
                 Premium Japanese green tea leaves.
               </p>
+
             </div>
 
             <div className="bg-white p-10 rounded-[30px] text-center">
-              <div className="text-5xl">💚</div>
+
+              <div className="text-5xl">
+                💚
+              </div>
 
               <h3 className="mt-6 text-2xl font-bold">
                 Chlorophyll
@@ -364,10 +433,14 @@ function Benefits() {
               <p className="mt-4 text-gray-600">
                 Natural detox support and wellness.
               </p>
+
             </div>
 
             <div className="bg-white p-10 rounded-[30px] text-center">
-              <div className="text-5xl">⚡</div>
+
+              <div className="text-5xl">
+                ⚡
+              </div>
 
               <h3 className="mt-6 text-2xl font-bold">
                 L-Theanine
@@ -376,10 +449,14 @@ function Benefits() {
               <p className="mt-4 text-gray-600">
                 Calm energy and mental clarity.
               </p>
+
             </div>
 
             <div className="bg-white p-10 rounded-[30px] text-center">
-              <div className="text-5xl">✨</div>
+
+              <div className="text-5xl">
+                ✨
+              </div>
 
               <h3 className="mt-6 text-2xl font-bold">
                 Catechins
@@ -388,6 +465,7 @@ function Benefits() {
               <p className="mt-4 text-gray-600">
                 Powerful antioxidants for wellness.
               </p>
+
             </div>
 
           </div>

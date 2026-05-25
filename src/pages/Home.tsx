@@ -3,7 +3,7 @@ import Benefits from '../home/Benefits'
 import FeaturedProducts from '../home/FeaturedProducts'
 import Testimonials from '../home/Testimonials'
 import MatchaRitual from '../home/MatchaRitual'
-import Newsletter from '../home/Newsletter'
+// import Newsletter from '../home/Newsletter'
 import InstagramGrid from '../home/InstagramGrid'
 
 function Home() {
@@ -20,7 +20,7 @@ function Home() {
 
       <MatchaRitual />
 
-      <Newsletter />
+      {/* <Newsletter /> */}
 
       <InstagramGrid />
 

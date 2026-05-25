@@ -1,3 +1,8 @@
+import img1 from '../assets/13.png'
+import img2 from '../assets/14.png'
+import img3 from '../assets/15.png'
+import img4 from '../assets/16.png'
+
 function InstagramGrid() {
   return (
     <section className="py-28 bg-white">
@@ -26,38 +31,46 @@ function InstagramGrid() {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
 
           {/* Card 1 */}
-          <div className="aspect-square rounded-[30px] bg-[#DFF1D8] flex items-center justify-center hover:scale-105 transition duration-300 cursor-pointer overflow-hidden">
+          <div className="aspect-square rounded-[30px] overflow-hidden hover:scale-105 transition duration-500 cursor-pointer shadow-lg">
 
-            <h3 className="text-3xl font-bold text-[#355E3B]">
-              MATCHA
-            </h3>
+            <img
+              src={img1}
+              alt="Matcha Lifestyle"
+              className="w-full h-full object-cover"
+            />
 
           </div>
 
           {/* Card 2 */}
-          <div className="aspect-square rounded-[30px] bg-[#355E3B] flex items-center justify-center hover:scale-105 transition duration-300 cursor-pointer overflow-hidden">
+          <div className="aspect-square rounded-[30px] overflow-hidden hover:scale-105 transition duration-500 cursor-pointer shadow-lg">
 
-            <h3 className="text-3xl font-bold text-white">
-              LATTE
-            </h3>
+            <img
+              src={img2}
+              alt="Matcha Latte"
+              className="w-full h-full object-cover"
+            />
 
           </div>
 
           {/* Card 3 */}
-          <div className="aspect-square rounded-[30px] bg-[#A7C957] flex items-center justify-center hover:scale-105 transition duration-300 cursor-pointer overflow-hidden">
+          <div className="aspect-square rounded-[30px] overflow-hidden hover:scale-105 transition duration-500 cursor-pointer shadow-lg">
 
-            <h3 className="text-3xl font-bold text-[#1D2B1F]">
-              WELLNESS
-            </h3>
+            <img
+              src={img3}
+              alt="Wellness Matcha"
+              className="w-full h-full object-cover"
+            />
 
           </div>
 
           {/* Card 4 */}
-          <div className="aspect-square rounded-[30px] bg-[#1D2B1F] flex items-center justify-center hover:scale-105 transition duration-300 cursor-pointer overflow-hidden">
+          <div className="aspect-square rounded-[30px] overflow-hidden hover:scale-105 transition duration-500 cursor-pointer shadow-lg">
 
-            <h3 className="text-3xl font-bold text-[#DFF1D8]">
-              RITUAL
-            </h3>
+            <img
+              src={img4}
+              alt="Matcha Ritual"
+              className="w-full h-full object-cover"
+            />
 
           </div>
 
@@ -66,9 +79,17 @@ function InstagramGrid() {
         {/* Instagram Button */}
         <div className="flex justify-center mt-14">
 
-          <button className="bg-[#355E3B] hover:bg-[#27452c] hover:scale-105 transition duration-300 text-white px-10 py-4 rounded-full text-lg">
-            Follow on Instagram
-          </button>
+          <a
+            href="https://instagram.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+
+            <button className="bg-[#355E3B] hover:bg-[#27452c] hover:scale-105 transition duration-300 text-white px-10 py-4 rounded-full text-lg">
+              Follow on Instagram
+            </button>
+
+          </a>
 
         </div>
 

@@ -4,34 +4,71 @@ import MainLayout from '../layouts/MainLayout'
 
 import Home from '../pages/Home'
 import Shop from '../pages/Shop'
+import Benefits from '../pages/Benefits'
 import About from '../pages/About'
 import Contact from '../pages/Contact'
-import Benefits from '../pages/Benefits'
+import ProductDetails from '../pages/ProductDetails'
+import Cart from '../pages/Cart'
 
 function AppRoutes() {
+
   return (
+
     <BrowserRouter>
 
       <Routes>
 
-        {/* Main Layout Wrapper */}
+        {/* Main Layout */}
         <Route element={<MainLayout />}>
 
-          <Route path="/" element={<Home />} />
+          {/* Home */}
+          <Route
+            path="/"
+            element={<Home />}
+          />
 
-          <Route path="/shop" element={<Shop />} />
+          {/* Shop */}
+          <Route
+            path="/shop"
+            element={<Shop />}
+          />
 
-          <Route path="/benefits" element={<Benefits />} />
+          {/* Benefits */}
+          <Route
+            path="/benefits"
+            element={<Benefits />}
+          />
 
-          <Route path="/about" element={<About />} />
+          {/* About */}
+          <Route
+            path="/about"
+            element={<About />}
+          />
 
-          <Route path="/contact" element={<Contact />} />
+          {/* Contact */}
+          <Route
+            path="/contact"
+            element={<Contact />}
+          />
+
+          {/* Product Details */}
+          <Route
+            path="/product/:id"
+            element={<ProductDetails />}
+          />
+
+          {/* Cart */}
+          <Route
+            path="/cart"
+            element={<Cart />}
+          />
 
         </Route>
 
       </Routes>
 
     </BrowserRouter>
+
   )
 }
 
