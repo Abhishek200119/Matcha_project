@@ -9,6 +9,8 @@ import About from '../pages/About'
 import Contact from '../pages/Contact'
 import ProductDetails from '../pages/ProductDetails'
 import Cart from '../pages/Cart'
+import Checkout from '../pages/Checkout'
+import OrderSuccess from '../pages/OrderSuccess'
 
 function AppRoutes() {
 
@@ -18,49 +20,61 @@ function AppRoutes() {
 
       <Routes>
 
-        {/* Main Layout */}
+        {/* MAIN LAYOUT ROUTES */}
         <Route element={<MainLayout />}>
 
-          {/* Home */}
+          {/* HOME */}
           <Route
             path="/"
             element={<Home />}
           />
 
-          {/* Shop */}
+          {/* SHOP */}
           <Route
             path="/shop"
             element={<Shop />}
           />
 
-          {/* Benefits */}
+          {/* BENEFITS */}
           <Route
             path="/benefits"
             element={<Benefits />}
           />
 
-          {/* About */}
+          {/* ABOUT */}
           <Route
             path="/about"
             element={<About />}
           />
 
-          {/* Contact */}
+          {/* CONTACT */}
           <Route
             path="/contact"
             element={<Contact />}
           />
 
-          {/* Product Details */}
+          {/* PRODUCT DETAILS */}
           <Route
             path="/product/:id"
             element={<ProductDetails />}
           />
 
-          {/* Cart */}
+          {/* CART */}
           <Route
             path="/cart"
             element={<Cart />}
+          />
+
+          {/* CHECKOUT */}
+          <Route
+            path="/checkout"
+            element={<Checkout />}
+          />
+
+          {/* ORDER SUCCESS */}
+          <Route
+            path="/order-success"
+            element={<OrderSuccess />}
           />
 
         </Route>

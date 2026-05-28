@@ -1,6 +1,8 @@
 import { useParams } from 'react-router-dom'
 import { useState } from 'react'
 
+import { useCart } from '../context/CartContext'
+
 import ceremonialImg from '../assets/2.png'
 import latteImg from '../assets/3.png'
 import giftImg from '../assets/4.png'
@@ -11,6 +13,8 @@ import lemonImg from '../assets/10.png'
 function ProductDetails() {
 
   const { id } = useParams()
+
+  const { addToCart } = useCart()
 
   const [quantity, setQuantity] = useState(1)
 
@@ -118,7 +122,7 @@ function ProductDetails() {
 
             </div>
 
-            {/* Small Product Gallery */}
+            {/* Gallery */}
             <div className="grid grid-cols-3 gap-4 mt-6">
 
               <div className="h-[120px] rounded-[20px] overflow-hidden border-2 border-[#355E3B]">
@@ -223,18 +227,32 @@ function ProductDetails() {
           {/* Buttons */}
           <div className="mt-12 flex flex-col sm:flex-row gap-5">
 
+            {/* Add To Cart */}
             <button
               onClick={() =>
-                alert(`${quantity} ${product.name} added to cart`)
+                addToCart({
+                  id: product.id,
+                  name: product.name,
+                  image: product.image,
+                  price: product.price,
+                  quantity,
+                })
               }
               className="bg-[#355E3B] hover:bg-[#27452c] hover:scale-105 transition duration-300 text-white px-10 py-5 rounded-full text-lg"
             >
               Add to Cart
             </button>
 
+            {/* Buy Now */}
             <button
               onClick={() =>
-                alert(`Proceeding to buy ${quantity} ${product.name}`)
+                addToCart({
+                  id: product.id,
+                  name: product.name,
+                  image: product.image,
+                  price: product.price,
+                  quantity,
+                })
               }
               className="border border-[#355E3B] text-[#355E3B] hover:bg-[#355E3B] hover:text-white transition duration-300 px-10 py-5 rounded-full text-lg"
             >
