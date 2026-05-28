@@ -1,6 +1,12 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router-dom'
 
 import MainLayout from '../layouts/MainLayout'
+
+import ScrollToTop from '../components/ScrollToTop'
 
 import Home from '../pages/Home'
 import Shop from '../pages/Shop'
@@ -18,9 +24,12 @@ function AppRoutes() {
 
     <BrowserRouter>
 
+      {/* SCROLL TO TOP */}
+      <ScrollToTop />
+
       <Routes>
 
-        {/* MAIN LAYOUT ROUTES */}
+        {/* MAIN LAYOUT */}
         <Route element={<MainLayout />}>
 
           {/* HOME */}

@@ -1,33 +1,39 @@
 import { Link } from 'react-router-dom'
 
 function Footer() {
+
   return (
+
     <footer className="bg-[#1D2B1F] text-white pt-20 pb-10">
 
       <div className="max-w-7xl mx-auto px-6">
 
-        {/* Top Section */}
+        {/* TOP SECTION */}
         <div className="grid md:grid-cols-4 gap-14 pb-16 border-b border-[#355E3B]">
 
-          {/* Brand */}
+          {/* BRAND */}
           <div>
 
             <Link to="/">
 
-              <h2 className="text-4xl font-bold tracking-wide text-[#DFF1D8]">
+              <h2 className="text-4xl font-bold tracking-wide text-[#DFF1D8] hover:opacity-90 transition">
+
                 MATCHA.
+
               </h2>
 
             </Link>
 
             <p className="mt-6 text-gray-300 leading-8">
+
               Premium Japanese matcha crafted for calm energy,
               wellness, and mindful living.
+
             </p>
 
           </div>
 
-          {/* Quick Links */}
+          {/* QUICK LINKS */}
           <div>
 
             <h3 className="text-2xl font-bold text-white">
@@ -40,7 +46,7 @@ function Footer() {
 
                 <Link
                   to="/"
-                  className="hover:text-white transition"
+                  className="hover:text-white transition duration-300"
                 >
                   Home
                 </Link>
@@ -51,7 +57,7 @@ function Footer() {
 
                 <Link
                   to="/shop"
-                  className="hover:text-white transition"
+                  className="hover:text-white transition duration-300"
                 >
                   Shop
                 </Link>
@@ -61,8 +67,19 @@ function Footer() {
               <li>
 
                 <Link
+                  to="/benefits"
+                  className="hover:text-white transition duration-300"
+                >
+                  Benefits
+                </Link>
+
+              </li>
+
+              <li>
+
+                <Link
                   to="/about"
-                  className="hover:text-white transition"
+                  className="hover:text-white transition duration-300"
                 >
                   About Us
                 </Link>
@@ -73,7 +90,7 @@ function Footer() {
 
                 <Link
                   to="/contact"
-                  className="hover:text-white transition"
+                  className="hover:text-white transition duration-300"
                 >
                   Contact
                 </Link>
@@ -84,7 +101,7 @@ function Footer() {
 
           </div>
 
-          {/* Contact */}
+          {/* CONTACT */}
           <div>
 
             <h3 className="text-2xl font-bold text-white">
@@ -102,15 +119,17 @@ function Footer() {
               </p>
 
               <p className="leading-7">
+
                 Matcha Wellness Studio,
                 Bangalore, India
+
               </p>
 
             </div>
 
           </div>
 
-          {/* Newsletter */}
+          {/* NEWSLETTER */}
           <div>
 
             <h3 className="text-2xl font-bold text-white">
@@ -118,7 +137,9 @@ function Footer() {
             </h3>
 
             <p className="mt-6 text-gray-300 leading-7">
+
               Subscribe for wellness tips and matcha updates.
+
             </p>
 
             <div className="mt-6 flex flex-col gap-4">
@@ -129,8 +150,10 @@ function Footer() {
                 className="px-5 py-4 rounded-full bg-white text-gray-700 outline-none"
               />
 
-              <button className="bg-[#355E3B] hover:bg-[#27452c] transition text-white py-4 rounded-full">
+              <button className="bg-[#355E3B] hover:bg-[#27452c] transition duration-300 text-white py-4 rounded-full">
+
                 Subscribe
+
               </button>
 
             </div>
@@ -139,20 +162,33 @@ function Footer() {
 
         </div>
 
-        {/* Bottom Section */}
+        {/* BOTTOM SECTION */}
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-6">
 
           <p className="text-gray-400 text-sm">
+
             © 2026 MATCHA. All Rights Reserved.
+
           </p>
 
-         
+          <div className="flex items-center gap-6 text-sm text-gray-400">
+
+            <p className="hover:text-white transition cursor-pointer">
+              Premium Wellness Brand
+            </p>
+
+            <p className="hover:text-white transition cursor-pointer">
+              Crafted With Matcha 🍃
+            </p>
+
+          </div>
 
         </div>
 
       </div>
 
     </footer>
+
   )
 }
 
